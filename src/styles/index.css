@@ -1,0 +1,183 @@
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body, h1 {
+  margin: 0;
+}
+
+body {
+  position: relative;
+  background: url("https://i.gifer.com/bFF.gif") center center / 100% 100% no-repeat fixed;
+}
+
+h1, h2, h3 {
+  line-height: 2rem;
+  margin: 0;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-style: italic;
+  font-size: 1.25rem;
+}
+
+h3 {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1rem;
+  color: rgb(45, 148, 185);
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  width: 55%;
+}
+
+span {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: rgb(76, 61, 168);
+}
+
+.App {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 1024px;
+}
+
+.Card {
+  position: relative;
+  background-color: #bbfb;
+  width: max-content;
+  margin: 10vh auto;
+  padding: 25px;
+  border-radius: 25px;
+  text-align: center;
+  color: rgb(76, 61, 168);
+}
+
+.Card__Btn {
+  background-color: rgb(76, 61, 168);
+  color: aliceblue;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+  width: max-content;
+  height: max-content;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: .8rem;
+}
+
+.Load {
+  position: relative;
+  background: url("https://acegif.com/wp-content/uploads/loading-32.gif") center center / 80% 80% no-repeat fixed;
+  width: 70vw;
+  height: 70vw;
+}
+
+.Load__Txt {
+  position: absolute;
+  color: aqua;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (min-width: 600px) {
+
+  h3, span {
+    font-size: 1.25rem;
+  }
+
+  .Card {
+    display: grid;
+    padding: 50px;
+    grid-template: repeat(7, 15%) / repeat(2, 50%);
+    grid-template-areas:
+                  "title title"
+                  "city  city"
+                  "icon  temp"
+                  "icon  des"
+                  "speed  wet"
+                  "clouds   pres"
+                  "btn   btn";
+  }
+
+  .Card__Title {
+    grid-area: title;
+    font-size: 2rem;
+  }
+
+  .Card__City {
+    grid-area: city;
+    font-size: 1.5rem;
+  }
+
+  .Card__Img {
+    grid-area: icon;
+    justify-self: end;
+    align-self: center;
+  }
+
+  .Card__Item0 {
+    grid-area: temp;
+    justify-self: center;
+    align-self: flex-end;
+  }
+
+  .Card__Item1 {
+    grid-area: des;
+    width: max-content;
+    justify-self: center;
+    align-self: flex-start;
+  }
+
+  .Card__Item2 {
+    grid-area: speed;
+    justify-self: center;
+  }
+
+  .Card__Item3 {
+    grid-area: clouds;
+    justify-self: center;
+  }
+
+  .Card__Item4 {
+    grid-area: wet;
+    justify-self: center;
+  }
+
+  .Card__Item5 {
+    grid-area: pres;
+    justify-self: center;
+  }
+
+  .Card__Btn {
+    grid-area: btn;
+    justify-self: center;
+    align-self: flex-start;
+    margin-top: 30px;
+  }
+
+}
