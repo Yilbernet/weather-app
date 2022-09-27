@@ -94,6 +94,8 @@ span {
   background: url("https://acegif.com/wp-content/uploads/loading-32.gif") center center / 80% 80% no-repeat fixed;
   width: 70vw;
   height: 70vw;
+  max-width: 700px;
+  max-height: 700px;
 }
 
 .Load__Txt {
